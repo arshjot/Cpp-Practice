@@ -3,8 +3,10 @@
 #include <string>
 #include <map>
 #include <list>
+#include <cstdlib>
 
 #include "gen_sentence.h"
+#include "time.h"
  
 using std::string;
 using std::list;
@@ -14,6 +16,7 @@ using std::endl;
 using std::map;
 
 int main() {
+	srand(time(NULL));
 	// generate the sentence
 	list<string> sentence = gen_sentence(read_grammar(cin));
 	
